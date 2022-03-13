@@ -2,26 +2,22 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class q2869 {
+public class q2525 {
 
 	public static void main(String[] args) throws Exception {
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-
-		int A = Integer.parseInt(st.nextToken());
-		int B = Integer.parseInt(st.nextToken());
-		int V = Integer.parseInt(st.nextToken());
-
-		int cnt = 0;
+		int hh = Integer.parseInt(st.nextToken());
+		int mm = Integer.parseInt(st.nextToken());
+		int t = Integer.parseInt(br.readLine());
 		
-		V -= A;
-		cnt += V/(A-B);
+		hh += (mm+t)/60;
+		hh %= 24;
+		mm += t;
+		mm %= 60;
 		
-		if(V%(A-B)==0)
-			cnt ++;
-		else
-			cnt += 2;
-		
-		System.out.println(cnt);
+		System.out.println(hh+" "+mm);
 	}
+
 }
