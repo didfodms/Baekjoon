@@ -19,15 +19,7 @@ public class q3009 {
 			
 		}
 		
-		Arrays.sort(xy, new Comparator<int[]>() {
-			@Override
-			public int compare(int[] o1, int[] o2) {
-				int res = o1[0] - o2[0];
-				if(res == 0) res = o1[1] - o2[1];
-				return res;
-			}
-		});
-		
+		int 
 		
 
 	}
